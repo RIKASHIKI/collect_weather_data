@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "cuaca": [
+        [
+          { "local_datetime": "2025-09-24T07:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T08:00:00", "t": 28, "hu": 78, "weather_desc": "Cerah Berawan", "wd": "E", "wd_deg": 95, "ws": 7, "tp": 0 },
+          { "local_datetime": "2025-09-24T09:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T10:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T11:00:00", "t": 31, "hu": 70, "weather_desc": "Cerah", "wd": "SE", "wd_deg": 140, "ws": 12, "tp": 0 },
+          { "local_datetime": "2025-09-24T12:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T13:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T14:00:00", "t": 33, "hu": 67, "weather_desc": "Hujan Sedang", "wd": "S", "wd_deg": 185, "ws": 17, "tp": 4 },
+          { "local_datetime": "2025-09-24T15:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T16:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-24T17:00:00", "t": 28, "hu": 79, "weather_desc": "Berawan Tebal", "wd": "W", "wd_deg": 265, "ws": 14, "tp": 0 },
+          { "local_datetime": "2025-09-24T18:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null }
+        ],
+        [
+          { "local_datetime": "2025-09-25T07:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T08:00:00", "t": 27, "hu": 81, "weather_desc": "Cerah", "wd": "NE", "wd_deg": 50, "ws": 8, "tp": 0 },
+          { "local_datetime": "2025-09-25T09:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T10:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T11:00:00", "t": 30, "hu": 73, "weather_desc": "Cerah Berawan", "wd": "E", "wd_deg": 100, "ws": 10, "tp": 0 },
+          { "local_datetime": "2025-09-25T12:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T13:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T14:00:00", "t": 32, "hu": 66, "weather_desc": "Hujan Lebat", "wd": "S", "wd_deg": 190, "ws": 18, "tp": 8 },
+          { "local_datetime": "2025-09-25T15:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T16:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-25T17:00:00", "t": 27, "hu": 76, "weather_desc": "Berawan", "wd": "SW", "wd_deg": 230, "ws": 12, "tp": 0 },
+          { "local_datetime": "2025-09-25T18:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null }
+        ],
+        [
+          { "local_datetime": "2025-09-26T07:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T08:00:00", "t": 28, "hu": 77, "weather_desc": "Cerah", "wd": "E", "wd_deg": 85, "ws": 9, "tp": 0 },
+          { "local_datetime": "2025-09-26T09:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T10:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T11:00:00", "t": 31, "hu": 70, "weather_desc": "Cerah", "wd": "ESE", "wd_deg": 110, "ws": 11, "tp": 0 },
+          { "local_datetime": "2025-09-26T12:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T13:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T14:00:00", "t": 34, "hu": 62, "weather_desc": "Hujan Sedang", "wd": "S", "wd_deg": 200, "ws": 20, "tp": 10 },
+          { "local_datetime": "2025-09-26T15:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T16:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null },
+          { "local_datetime": "2025-09-26T17:00:00", "t": 28, "hu": 77, "weather_desc": "Berawan", "wd": "W", "wd_deg": 275, "ws": 15, "tp": 0 },
+          { "local_datetime": "2025-09-26T18:00:00", "t": null, "hu": null, "weather_desc": "Tidak ada data", "wd": "", "wd_deg": "", "ws": null, "tp": null }
+        ]
+      ]
+    }
+  ]
+}
