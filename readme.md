@@ -1,20 +1,22 @@
 ## INSTALASI
+jalankan aplikasi dengan perintah berikut
 ```bash
 npm start
 ```
 
-## KETENTUAN YANG BERLAKU
-- pengujian dilakukan selama seminggu di dua tempat berbeda (jorong dan banjarbaru)
-- data pengujian di ambil setiap 3 jam
-- pengujian hanya dilakukan dari jam 6 pagi hingga 6 malam
+## KETENTUAN PENGUJIAN
+- pengujian dilakukan selama 7 hari di satu tempat (jorong)
+- data pengujian di ambil setiap 3 jam sekali
+- pengujian hanya dilakukan dari jam 7 pagi hingga 6 malam
 
 ## CATATAN
 > sistem hanya mengambil data per 1 jam dari jam 7 pagi hingga 6 malam (7,10,13,16)
-> sumber data di ambil dari BMKG
+> sumber data di berasal dari BMKG
+> BMKG hanya menyediakan data prakiraan per 3 jam
 
 ## format pengisian data manual
-waktu di ambil (tambahkan abjad di depan waktu untuk menghindari nilai data berubah)
-> contoh
+untuk menghindari perubahan nilai data otomatis, tambahkan huruf di deoan waktu.
+contoh:
 ```c
 s 11:03
 ```
@@ -45,4 +47,6 @@ s 11:03
         }
     ]
 }
+
+
 ```
