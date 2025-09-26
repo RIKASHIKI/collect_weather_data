@@ -174,6 +174,9 @@ async function getCuacaToExcel() {
     }
 
     XLSX.writeFile(workbook, filename);
+    const csvFilename = filename.replace(".xlsx", ".csv");
+    const csvData = XLSX.utils.sheet_to_csv(worksheet);
+    fs.writeFileSync(csvFilename, csvData, "utf8");
 
     if (updated) {
       console.log(`\nData cuaca berhasil diperbarui ke ${filename}`);
