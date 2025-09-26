@@ -5,7 +5,7 @@
   "main": "getcuaca.js",
   "scripts": {
     "prestart": "node -e \"try{require('fs').accessSync('node_modules');}catch(e){process.exit(1)}\" || npm i",
-    "start": "node getcuaca.js",
+    "start": "node getcuaca.js && git add . && git commit -m \"update fitur X\" && git push",
     "test": "node test.js"
   },
   "keywords": [],
