@@ -2,11 +2,10 @@ const config = require('./helper/config.js');
 const { formatDateIndo } = require('./helper/function.js');
 const XLSX = require('xlsx');
 const fs = require('fs');
-//const data = JSON.parse(fs.readFileSync('./helper/dummy.json', 'utf-8'));
 
-async function getCuacaToExcel() {
+async function getCuacaToCSV() {
   try {
-    console.log("(1)=== Mulai proses ambil data cuaca ===\n");
+    console.log("(2)=== Mulai proses ambil data cuaca ===\n");
 
     const url = `${config.API}${config.ID_API}`;
     const response = await fetch(url);
@@ -33,10 +32,10 @@ async function getCuacaToExcel() {
       const targetHours = Array.from({ length: 12 }, (_, i) => i + 7);
       targetHours.forEach(h => {
         const found = cuacaList.find(item => {
-        const dtStr = item.local_datetime || item.datetime; 
-        const datePart = dtStr.slice(0, 10);
-        const hourPart = parseInt(dtStr.slice(11, 13), 10);
-        return datePart === d && hourPart === h;
+          const dtStr = item.local_datetime || item.datetime; 
+          const datePart = dtStr.slice(0, 10);
+          const hourPart = parseInt(dtStr.slice(11, 13), 10);
+          return datePart === d && hourPart === h;
         });
 
         if (found) {
@@ -60,44 +59,29 @@ async function getCuacaToExcel() {
       });
     });
 
-    console.log(
-      `Jumlah data cuaca setelah filter: ${filteredList.length}\n`
-    );
+    console.log(`Jumlah data cuaca setelah filter: ${filteredList.length}\n`);
 
-    const filename = "data.xlsx";
-    let workbook, worksheet, rows = [];
+    const filename = "data.csv";
+    let rows = [];
 
     if (fs.existsSync(filename)) {
-      workbook = XLSX.readFile(filename);
-      worksheet = workbook.Sheets["Prakiraan Cuaca"];
-      if (worksheet) {
-        rows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-      } else {
-        console.log("Membuat header baru");
-        rows = [
-          [
-            "DATA API","DATA API","DATA API","DATA API","DATA API","DATA API","DATA API",
-            "DATA MANUAL","DATA MANUAL","DATA MANUAL"
-          ],
-          [
-            "Datetime","Suhu (°C)","Kelembapan (%)","Cuaca","Arah Angin",
-            "Kecepatan Angin (km/jam)","Curah Hujan (mm)",
-            "Waktu di ambil","Suhu (°C)","Cuaca"
-          ]
-        ];
-      }
-    } else {
-      console.log(`File ${filename} belum ada membuat workbook baru`);
-      workbook = XLSX.utils.book_new();
+      // baca CSV lama
+      const oldWorkbook = XLSX.readFile(filename);
+      const oldSheet = oldWorkbook.Sheets[oldWorkbook.SheetNames[0]];
+      rows = XLSX.utils.sheet_to_json(oldSheet, { header: 1 });
+    }
+
+    // kalau file kosong, bikin header baru
+    if (rows.length === 0) {
       rows = [
         [
           "DATA API","DATA API","DATA API","DATA API","DATA API","DATA API","DATA API",
           "DATA MANUAL","DATA MANUAL","DATA MANUAL"
         ],
         [
-          "Datetime","Suhu (°C)","Kelembapan (%)","Cuaca","Arah Angin",
+          "Datetime","Suhu (C)","Kelembapan (%)","Cuaca","Arah Angin",
           "Kecepatan Angin (km/jam)","Curah Hujan (mm)",
-          "Waktu di ambil","Suhu (°C)","Cuaca"
+          "Waktu di ambil","Suhu (C)","Cuaca"
         ]
       ];
     }
@@ -112,7 +96,7 @@ async function getCuacaToExcel() {
         item.t,
         item.hu,
         item.weather_desc,
-        item.wd ? `${item.wd} (${item.wd_deg}°)` : "",
+        item.wd ? `${item.wd} (${item.wd_deg})` : "",
         item.ws,
         item.tp
       ];
@@ -160,20 +144,10 @@ async function getCuacaToExcel() {
       }
     });
 
-    worksheet = XLSX.utils.aoa_to_sheet(rows);
-    worksheet['!merges'] = [
-      { s: { r: 0, c: 0 }, e: { r: 0, c: 6 } },
-      { s: { r: 0, c: 7 }, e: { r: 0, c: 9 } }
-    ];
-
-    const sheetName = "Prakiraan Cuaca";
-    if (workbook.SheetNames.includes(sheetName)) {
-      workbook.Sheets[sheetName] = worksheet;
-    } else {
-      XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
-    }
-
-    XLSX.writeFile(workbook, filename);
+    // simpan ke CSV
+    const worksheet = XLSX.utils.aoa_to_sheet(rows);
+    const csvData = XLSX.utils.sheet_to_csv(worksheet);
+    fs.writeFileSync(filename, csvData, "utf8");
 
     if (updated) {
       console.log(`\nData cuaca berhasil diperbarui ke ${filename}`);
@@ -181,10 +155,10 @@ async function getCuacaToExcel() {
       console.log("\nTidak ada data baru untuk diperbarui");
     }
 
-    console.log("=== Proses EXCEL selesai ===");
+    console.log("=== Proses CSV selesai ===");
   } catch (error) {
     console.error("Error:", error.message);
   }
 }
 
-getCuacaToExcel();
+getCuacaToCSV();
