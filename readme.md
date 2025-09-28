@@ -13,7 +13,7 @@ npm start
 > - sistem hanya mengambil data per 1 jam dari jam 7 pagi hingga 6 malam (7,10,13,16)
 > - sumber data di berasal dari BMKG
 > - BMKG hanya menyediakan data prakiraan per 3 jam
-> - berdasarkan pengamatan yang dilakukan selama 2 hari, dari jam 11.00 hingga jam 14.00 api tidak melakukan pembaruan data
+> - berdasarkan pengamatan yang dilakukan, dari jam 12.00 hingga jam 14.00 api tidak melakukan pembaruan data
 
 ## format pengisian data manual
 untuk menghindari perubahan nilai data otomatis, tambahkan huruf di deoan waktu.
