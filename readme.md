@@ -50,3 +50,6 @@ s 11:03
 
 
 ```
+
+
+(lokasi api cuaca)[https://maps.app.goo.gl/KVR62xMKJ7UECz5p9]
