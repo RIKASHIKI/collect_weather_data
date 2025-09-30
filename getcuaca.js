@@ -147,7 +147,7 @@ async function getCuacaToExcel() {
             console.log(`   Ke  : ${newRow.join(" | ")}\n`);
             updated = true;
           } else {
-            console.log(`[SKIP] ${datetimeFormatted}`);
+            console.log(`[SKIP] ${datetimeFormatted} empty data`);
           }
         } else {
           console.log(`[SKIP] ${datetimeFormatted} no change`);
