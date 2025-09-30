@@ -147,15 +147,15 @@ async function getCuacaToExcel() {
             console.log(`   Ke  : ${newRow.join(" | ")}\n`);
             updated = true;
           } else {
-            console.log(`[SKIP] ${datetimeFormatted} tidak bisa menimpa data terisi dengan kosong`);
+            console.log(`[SKIP] ${datetimeFormatted}`);
           }
         } else {
-          console.log(`[SKIP] ${datetimeFormatted} tidak ada perubahan`);
+          console.log(`[SKIP] ${datetimeFormatted} no change`);
         }
       } else {
         // baris baru
         rows.push([...newRow, "", "", ""]);
-        console.log(`[NEW] ${datetimeFormatted} ditambahkan`);
+        console.log(`[NEW] ${datetimeFormatted} add`);
         updated = true;
       }
     });
