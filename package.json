@@ -7,13 +7,13 @@
     "prestart": "node -e \"try{require('fs').accessSync('node_modules');}catch(e){process.exit(1)}\" || npm i",
     "start": "node getcuaca.js && node getcuaca2.js",
     "test": "node test.js",
-    "save": "git add data.xlsx data.csv && git commit -m 'save from replit' && git push origin main"
+    "save": "git add data.xlsx data.csv && git commit -m 'save from replit' && git push origin main",
+    "saveall": "git add . && git commit -m 'save all from replit' && git push origin main"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-schedule": "^2.1.1",
     "xlsx": "^0.18.5"
   }
 }
