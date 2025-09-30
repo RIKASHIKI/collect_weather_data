@@ -14,6 +14,7 @@ npm start
 > - sumber data di berasal dari BMKG
 > - BMKG hanya menyediakan data prakiraan per 3 jam
 > - berdasarkan pengamatan yang dilakukan, dari jam 12.00 hingga jam 14.00 api tidak melakukan pembaruan data
+> - dibutuhkan rain sensor untuk membantu prototype agar sesuai tujuan
 
 ## format pengisian data manual
 untuk menghindari perubahan nilai data otomatis, tambahkan huruf di deoan waktu.
