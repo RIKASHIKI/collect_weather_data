@@ -8,7 +8,7 @@ async function getCuacaToExcel() {
   try {
     console.log("(1)=== Mulai proses ambil data cuaca ===\n");
 
-    const url = `${config.API}${config.ID_API}`;
+    const url = `${config.API2}${config.ID_API3}`;
     const response = await fetch(url);
 
     if (!response.ok) {
